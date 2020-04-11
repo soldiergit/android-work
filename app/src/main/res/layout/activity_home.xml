@@ -6,20 +6,32 @@
     tools:context="com.soldier.work2.HomeActivity">
 
     <TextView
+        android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="xxx您好，欢迎回来！"
-        android:textColor="#c20505"
         android:textSize="25dp"
-        android:id="@+id/welcome"
+        android:textColor="#c20505"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="43dp" />
+
+    <Button
+        android:id="@+id/button_address_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcome"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="35dp"
+        android:background="#b708f63b"
+        android:text="通讯录"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/button_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/welcome"
+        android:layout_below="@id/button_address_book"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="35dp"

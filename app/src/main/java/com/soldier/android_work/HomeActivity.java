@@ -16,7 +16,10 @@ import android.widget.Toast;
  */
 public class HomeActivity extends ActionBarActivity {
 
+    // 退出按钮
     private Button btn_logout;
+    // 通讯录按钮
+    private Button button_address_book;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,16 +29,31 @@ public class HomeActivity extends ActionBarActivity {
 
         // 获取页面按钮对象
         btn_logout = (Button)findViewById(R.id.button_logout);
+        button_address_book = (Button)findViewById(R.id.button_address_book);
         // 为按钮添加单击时间监听
-        btn_logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //消息提示
-                Toast.makeText(HomeActivity.this, "退出成功", Toast.LENGTH_SHORT).show();
-                // 页面跳转
-                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
-                startActivity(intent);
+        btn_logout.setOnClickListener(new MyButton());
+        button_address_book.setOnClickListener(new MyButton());
+    }
+
+    public class MyButton implements View.OnClickListener {
+        Intent intent = null;
+        @Override
+        public void onClick(View view) {
+
+            switch (view.getId()) {
+                case R.id.button_logout :
+                    //消息提示
+                    Toast.makeText(HomeActivity.this, "退出成功", Toast.LENGTH_SHORT).show();
+                    // 页面跳转
+                    intent = new Intent(HomeActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.button_address_book :
+                    // 页面跳转
+                    intent = new Intent(HomeActivity.this, AddressBookActivity.class);
+                    startActivity(intent);
+                    break;
             }
-        });
+        }
     }
 }

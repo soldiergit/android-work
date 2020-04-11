@@ -14,6 +14,9 @@ import com.soldier.android_work.util.SaveInfo;
 
 import java.util.Map;
 
+/**
+ * 登录界面
+ */
 public class MainActivity extends ActionBarActivity {
 
     private EditText et_username;
@@ -25,13 +28,17 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTitle("Author:soldier");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // 读取本地是否保存了账号密码
         Map<String, String> userInfo = SaveInfo.getSaveInformation(this);
         if (userInfo != null) {
             et_username.setText(userInfo.get("username"));
             et_password.setText(userInfo.get("password"));
         }
+
         // 获取页面组件对象
         et_username = (EditText) findViewById(R.id.et_username);
         et_password = (EditText) findViewById(R.id.et_password);

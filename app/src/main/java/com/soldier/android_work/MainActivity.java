@@ -1,7 +1,7 @@
 package com.soldier.android_work;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * 登录界面
  */
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     private EditText et_username;
     private EditText et_password;

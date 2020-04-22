@@ -1,6 +1,6 @@
 package com.soldier.android_work;
 
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * 通讯录界面
  */
-public class AddressBookActivity extends ActionBarActivity {
+public class AddressBookActivity extends AppCompatActivity {
 
     private EditText et_phone_name;
     private EditText et_phone_number;

@@ -2,7 +2,7 @@ package com.soldier.android_work;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -14,7 +14,7 @@ import android.widget.Toast;
  * @Version 1.0
  * @Description:登录成功显示
  */
-public class HomeActivity extends ActionBarActivity {
+public class HomeActivity extends AppCompatActivity {
 
     // 退出按钮
     private Button btn_logout;
